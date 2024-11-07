@@ -1,0 +1,20 @@
+
+<app-header></app-header>
+<div class="container">
+    <h2 class="tag">--Previous Services--</h2>
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1">ID</div>
+        <div class="col col-2">Name</div>
+        <div class="col col-3">Service Type</div>
+        <div class="col col-4">Date</div>
+      </li>
+      <li *ngFor="let service of serviceList" class="table-row">
+        <div class="col col-1" data-label="Job Id">{{service.id}}</div>
+        <div class="col col-2" data-label="Customer Name">{{service.name}}</div>
+        <div class="col col-3" data-label="Amount">{{service.serviceType}}</div>
+        <div class="col col-4" data-label="Payment Status">{{service.date}}</div>
+      </li>
+     
+    </ul>
+  </div>

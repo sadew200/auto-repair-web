@@ -1,0 +1,73 @@
+
+<img class="imgBg" [src]="'assets/img/loginBg.jpg'">
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div style="padding: 60px 20px 0px 80px;" class="col-xl-6 col-lg-6 col-12">
+            <div class="row">
+                <img class="icon"  [src]="'assets/img/iconS.jpeg'">
+            </div>
+            <div class="row">
+                <h1 class="loginP">
+                    <h1 class="loginTag">Welcome to SHOWDANE!</h1><br>
+                    Log in to manage your services, track repairs, and keep<br> your car running smoothly. New to SHOWDANE? Create an<br> account and get started today!
+
+                </h1>
+				
+				<button routerLink="/SignUp"  class="button login__submit">
+					<span class="button__text">Sign-Up Now</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>	
+
+            </div>
+        </div>
+
+
+    <div class="col-xl-6 col-lg-6 col-12">
+
+
+	<div style="padding-left: 40px;" class="container">
+	<div class="screen">
+		<div class="screen__content">
+			<form class="login">
+				<div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+					<input [(ngModel)]="loginAcc.email" name="email" type="text" class="login__input" placeholder="Email">
+				</div>
+				<h5 *ngIf="errorEmail" class="errorMs">{{errorEmail}}</h5>
+
+				<div class="login__field">
+					<i class="login__icon fas fa-lock"></i>
+					<input [(ngModel)]="loginAcc.password" name="password" type="password" class="login__input" placeholder="Password">
+				</div>
+				<h5 *ngIf="errorPassword" class="errorMs">{{errorPassword}}</h5>
+
+				<button (click)="login()" class="button login__submit">
+					<span class="button__text">Log In Now</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>				
+			</form>
+			<div class="social-login">
+				<h3>log in via</h3>
+				<div class="social-icons">
+					<a href="#" class="social-login__icon fab fa-instagram"></a>
+					<a href="#" class="social-login__icon fab fa-facebook"></a>
+					<a href="#" class="social-login__icon fab fa-twitter"></a>
+				</div>
+			</div>
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+	</div>
+</div>
+
+
+</div>
+</div>
+<app-footer></app-footer>
